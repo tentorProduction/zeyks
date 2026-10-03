@@ -1,0 +1,24 @@
+.article { padding: 96px 0 88px; background: #fff; border-bottom: 1px solid var(--color-border); }
+.back { display: inline-flex; align-items: center; gap: 8px; color: var(--color-text-secondary); font-size: 13px; font-weight: 600; }
+.back:hover { color: var(--color-primary); }
+.meta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin: 44px 0 18px; color: #98a2b3; font-size: 12.5px; font-weight: 600; }
+.category { color: var(--color-primary); font-size: 11px; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
+.article h1 { max-width: 800px; margin-bottom: 18px; font-size: clamp(34px, 4.4vw, 54px); }
+.description { max-width: 640px; margin: 0; font-size: 19px; line-height: 1.65; }
+
+.body { margin-top: 56px; }
+.body p { max-width: 640px; margin: 0 0 22px; font-size: 17.5px; line-height: 1.8; }
+.pull { padding-left: 24px; color: var(--color-text) !important; border-left: 3px solid var(--color-primary); font-size: 21px !important; font-weight: 650; line-height: 1.55 !important; }
+.signature { margin: 40px 0 0 !important; padding-top: 24px; border-top: 1px solid var(--color-border); color: #98a2b3 !important; font-size: 13px !important; }
+
+.more { padding: var(--space-20) 0; }
+.more h2 { margin-bottom: 28px; font-size: 30px; }
+.moreGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.moreCard { display: grid; align-content: start; height: 100%; padding: 28px; background: #fff; border: 1px solid var(--color-border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); transition: transform .25s cubic-bezier(.2,.8,.2,1), border-color .25s, box-shadow .25s; }
+.moreCard:hover { transform: translateY(-4px); border-color: color-mix(in srgb, var(--color-primary) 35%, var(--color-border)); box-shadow: var(--shadow-md); }
+.moreCard .meta { margin: 0 0 12px; }
+.moreCard h3 { margin: 0 0 16px; font-size: 19px; }
+.readLink { display: inline-flex; align-items: center; gap: 7px; color: var(--color-primary); font-size: 12.5px; font-weight: 700; }
+
+@media (max-width: 900px) { .moreGrid { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .article { padding: 72px 0 64px; } .meta { margin-top: 32px; } }

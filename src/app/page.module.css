@@ -1,0 +1,44 @@
+.hero { overflow: hidden; padding: 96px 0 88px; background: var(--color-surface); border-bottom: 1px solid var(--color-border); }
+.heroGrid { display: grid; grid-template-columns: 1.04fr .96fr; align-items: center; gap: clamp(48px, 7vw, 96px); }
+.heroCopy { position: relative; z-index: 2; }
+.heroEyebrow { display: flex; flex-direction: column; gap: 2px; margin-bottom: 28px; padding-left: 14px; border-left: 2px solid var(--color-primary); text-transform: uppercase; }
+.heroEyebrow strong { font-size: 12px; letter-spacing: .16em; }.heroEyebrow span { color: var(--color-text-secondary); font-size: 10px; font-weight: 650; letter-spacing: .1em; }
+.hero h1 { max-width: 720px; margin-bottom: 24px; font-size: clamp(48px, 6.2vw, 76px); line-height: 1.02; }
+.heroText { max-width: 620px; margin-bottom: 34px; font-size: 19px; line-height: 1.7; }
+.heroActions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.ecosystemIntro { padding: 112px 0; background: var(--color-background); }
+.introGrid { display: grid; grid-template-columns: .95fr 1.05fr; gap: clamp(48px, 9vw, 120px); align-items: start; }
+.introGrid h2 { margin: 0; }.introCopy > p { margin-bottom: 42px; font-size: 19px; line-height: 1.75; }
+.introStats { display: grid; grid-template-columns: repeat(3, 1fr); padding-top: 24px; border-top: 1px solid var(--color-border); }
+.introStats span { color: var(--color-text-secondary); font-size: 11px; font-weight: 600; }.introStats strong { display: block; margin-bottom: 5px; color: var(--color-text); font-size: 27px; letter-spacing: -.04em; }
+
+.companyGrid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; }
+.companyGrid > div { grid-column: span 2; }.companyGrid > div:nth-child(4) { grid-column: 2 / span 2; }.companyGrid > div:nth-child(5) { grid-column: 4 / span 2; }
+.companyCard { display: grid; min-height: 360px; grid-template-rows: auto 1fr auto; }
+/* flagship emphasis — Zeyks Book (wrapper class targets the card inside) */
+.companyFeature .companyCard { color: #fff; background: #111; border-color: #111; box-shadow: var(--shadow-lg); }
+.companyFeature .companyCard:hover { border-color: #26262a; box-shadow: var(--shadow-lg); }
+.companyFeature .category { color: #72aeff; }
+.companyFeature .companyCode { color: #fff; background: var(--color-primary); }
+.companyFeature .companyIndex { color: #69717d; }
+.companyFeature p:not(.category) { color: #aeb5c2; }
+.companyFeature .explore { color: #fff; }
+.companyHead { display: flex; align-items: center; justify-content: space-between; margin-bottom: 54px; }
+.companyCode { display: grid; width: 52px; height: 52px; place-items: center; color: var(--color-primary); background: var(--color-soft-blue); border-radius: 13px; font-size: 15px; font-weight: 800; }.companyIndex { color: #b1b7c1; font-size: 11px; font-weight: 650; }
+.category { margin-bottom: 9px; color: var(--color-primary); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }.companyCard h3 { margin-bottom: 12px; font-size: 23px; }.companyCard p:not(.category) { font-size: 14px; line-height: 1.7; }
+.explore { display: inline-flex; align-items: center; gap: 8px; width: fit-content; margin-top: 24px; font-size: 13px; font-weight: 650; }.companyCard:hover .explore { color: var(--color-primary); }
+
+.capabilityGrid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--color-border); border-left: 1px solid var(--color-border); }
+.capabilityGrid > div { height: 100%; }.capability { display: grid; height: 100%; min-height: 170px; grid-template-columns: 1fr auto; align-content: space-between; gap: 28px; padding: 28px; color: var(--color-text); background: var(--color-surface); border-right: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); transition: color .2s, background .2s; }.capability > svg:first-child { color: var(--color-primary); }.capability span { align-self: end; font-size: 16px; font-weight: 650; }.capability > svg:last-child { align-self: end; color: #a3aab5; }.capability:hover { color: var(--color-primary); background: var(--color-soft-blue); }
+
+.process { display: grid; grid-template-columns: repeat(6, 1fr); margin-top: 16px; border-top: 1px solid #313136; }
+.step { position: relative; min-height: 200px; padding: 26px 18px 0 0; }.step span { color: #69717d; font-size: 11px; font-weight: 700; }.step h3 { margin-top: 70px; font-size: 20px; }.step i { position: absolute; top: -4px; left: 0; width: 8px; height: 8px; background: var(--color-primary); border-radius: 50%; box-shadow: 0 0 0 6px #1d2a3d; }
+
+.finalCta { padding: 104px 0; background: var(--color-background); }
+.ctaPanel { position: relative; overflow: hidden; padding: 76px; color: #fff; background: #111; border-radius: var(--radius-xl); }.ctaPanel::after { position: absolute; right: -110px; bottom: -200px; width: 420px; height: 420px; content: ''; border: 76px solid rgba(22,119,255,.24); border-radius: 50%; }.ctaPanel h2 { position: relative; z-index: 1; max-width: 700px; margin-bottom: 18px; font-size: clamp(40px, 5vw, 62px); }.ctaPanel p:not(.eyebrow) { position: relative; z-index: 1; max-width: 580px; margin-bottom: 32px; color: #aeb5c2; font-size: 18px; }.ctaPanel a { position: relative; z-index: 1; }
+.ctaActions { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 8px; }
+
+@media (max-width: 980px) { .heroGrid { grid-template-columns: 1fr; }.heroCopy { max-width: 760px; }.companyGrid { grid-template-columns: repeat(2, 1fr); }.companyGrid > div, .companyGrid > div:nth-child(4), .companyGrid > div:nth-child(5) { grid-column: auto; }.companyGrid > div:last-child { grid-column: 1 / -1; }.capabilityGrid { grid-template-columns: repeat(2, 1fr); }.process { grid-template-columns: repeat(3, 1fr); }.step { min-height: 160px; }.step h3 { margin-top: 46px; } }
+@media (max-width: 700px) { .hero { padding: 70px 0 54px; }.hero h1 { font-size: clamp(43px, 13vw, 60px); }.introGrid { grid-template-columns: 1fr; gap: 32px; }.ecosystemIntro { padding: 76px 0; }.companyGrid { grid-template-columns: 1fr; }.companyGrid > div:last-child { grid-column: auto; }.companyCard { min-height: 310px; }.process { grid-template-columns: repeat(2, 1fr); }.ctaPanel { padding: 48px 28px; } }
+@media (max-width: 480px) { .heroActions { flex-direction: column; }.heroActions a { width: 100%; }.introStats { gap: 14px; }.capabilityGrid { grid-template-columns: 1fr; }.capability { min-height: 130px; }.process { grid-template-columns: 1fr 1fr; } }

@@ -1,0 +1,13 @@
+.frame { position: relative; min-height: 500px; perspective: 1000px; }
+.network { position: absolute; inset: 18px 0 52px; transform: rotateX(var(--tilt-x)) rotateY(var(--tilt-y)); transform-style: preserve-3d; transition: transform .25s ease-out; }
+.network::before { position: absolute; inset: 12%; content: ''; background: radial-gradient(circle, rgba(22,119,255,.08), transparent 66%); border: 1px solid rgba(22,119,255,.09); border-radius: 50%; }
+.lines { position: absolute; inset: 0; width: 100%; height: 100%; }.lines path { fill: none; stroke: #dbe1ea; stroke-width: 1.2; stroke-dasharray: 4 5; }
+.core { position: absolute; z-index: 2; top: 50%; left: 50%; display: grid; width: 150px; height: 150px; place-items: center; align-content: center; color: #fff; background: #111; border: 8px solid #fff; border-radius: 50%; box-shadow: var(--shadow-lg); transform: translate(-50%, -50%) translateZ(24px); }
+.coreMark { display: block; width: auto; height: 36px; margin-bottom: 8px; }.core strong { font-size: 13px; letter-spacing: -.02em; }.core small { margin-top: 2px; color: #9199a5; font-size: 9px; text-transform: uppercase; }
+.node { position: absolute; z-index: 3; display: grid; min-width: 92px; justify-items: center; padding: 14px 16px; background: #fff; border: 1px solid var(--color-border); border-radius: 12px; box-shadow: var(--shadow-sm); transform: translate(-50%, -50%); transition: border-color .2s, box-shadow .2s, transform .2s; }
+.node:hover { border-color: #9ec7ff; box-shadow: var(--shadow-md); transform: translate(-50%, -53%) translateZ(16px); }.node strong { color: var(--color-primary); font-size: 13px; }.node span { color: var(--color-text-secondary); font-size: 10px; font-weight: 600; }
+.one { top: 17%; left: 19%; }.two { top: 16%; left: 79%; }.three { top: 62%; left: 89%; }.four { top: 88%; left: 52%; }.five { top: 68%; left: 11%; }
+.hint { position: absolute; right: 0; bottom: 0; margin: 0; color: #98a2b3; font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+@media (max-width: 900px) { .frame { width: min(100%, 620px); margin-inline: auto; } }
+@media (max-width: 560px) { .frame { min-height: 390px; }.network { inset: 0 0 42px; }.core { width: 116px; height: 116px; }.coreMark { height: 28px; }.node { min-width: 70px; padding: 10px 11px; }.one { left: 16%; }.two { left: 82%; }.three { left: 84%; }.five { left: 15%; } }
+@media (prefers-reduced-motion: reduce) { .network, .node { transition: none; } }
